@@ -1,0 +1,27 @@
+{{#if name}}
+  Приветствуем,
+  {{name}}
+{{/if}}
+
+<nav>
+  <ul>
+    <li>
+      <a href="/">Главная страница</a>
+    </li>
+    {{#if name}}
+      <li>
+        <a href="/auth/signout">Выйти из аккаунта</a>
+      </li>
+    {{else}}
+
+      <li>
+        <a href="/auth/signup">Зарегестрироваться</a>
+      </li>
+      <li>
+        <a href="/auth/signin">Войти в аккаунт</a>
+      </li>
+
+    {{/if}}
+
+  </ul>
+</nav>
